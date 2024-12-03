@@ -25,7 +25,6 @@ int main() {
     std::smatch matchdont;
 
     while (std::regex_search(search_start, corrupted_memory.cend(), match, valid_mul_pattern)) {
-        std::regex_search(search_start, corrupted_memory.cend(), match, valid_mul_pattern);
         std::regex_search(search_start, corrupted_memory.cend(), matchdo, do_pattern);
         std::regex_search(search_start, corrupted_memory.cend(), matchdont, dont_pattern);
         if ((matchdo.empty() || match.position(0) < matchdo.position(0)) && (matchdont.empty() || match.position(0) < matchdont.position(0))) {
